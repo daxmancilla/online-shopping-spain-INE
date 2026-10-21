@@ -1,0 +1,20 @@
+"variable","group","rate","n"
+"Sex","Man",55.5438228325462,6507
+"Sex","Woman",57.7936427972375,7371
+"Age group","16-24",63.2654081171867,1222
+"Age group","25-34",71.7786270700681,1230
+"Age group","35-44",69.7521712412676,2372
+"Age group","45-54",60.5334854921684,3291
+"Age group","55-64",44.9178113118349,3197
+"Age group","65-74",26.7612809914028,2566
+"Education","Up to lower secondary",34.27663123582,4723
+"Education","Upper secondary",59.8638097083357,3267
+"Education","Tertiary",72.1663465516484,5888
+"Household income (euros/month)","Under 1,600",46.6066529453505,4400
+"Household income (euros/month)","1,600 to 2,999",53.5268019492523,5553
+"Household income (euros/month)","3,000 or more",67.7295345528285,3844
+"Household income (euros/month)","Not reported",31.4472521867834,81
+"Employment status","Employee",67.3270784592568,6638
+"Employment status","Self-employed",63.0481183437748,1310
+"Employment status","Unemployed",48.9513506808127,1220
+"Employment status","Inactive",41.1462959099002,4710

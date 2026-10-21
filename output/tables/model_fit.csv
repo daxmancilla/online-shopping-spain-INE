@@ -1,0 +1,9 @@
+"statistic","value"
+"Observations",6638
+"Share of buyers in the sample",0.671
+"Pseudo R2 (1 - deviance / null deviance, weighted)",0.095
+"Accuracy (cut-off 0.5)",0.713
+"No-information rate (always predict the majority class)",0.671
+"Sensitivity (buyers correctly predicted)",0.88
+"Specificity (non-buyers correctly predicted)",0.374
+"Area under the ROC curve",0.713
