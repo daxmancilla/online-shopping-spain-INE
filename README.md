@@ -1,6 +1,6 @@
-# Who buys online in Spain? Evidence from the INE ICT household survey, 2024
+# Who buys online in Spain? A binary logit model with the INE ICT household survey, 2024
 
-R code to measure online shopping in Spain and model its determinants with the microdata of the **Survey on Equipment and Use of Information and Communication Technologies in Households (TIC-H) 2024** of the Spanish National Statistics Institute (INE). The pipeline cleans the microdata, estimates weighted shares by population group, fits a weighted logit model for employees and reports average marginal effects and predictive performance.
+R code to measure online shopping in Spain and model its determinants with the microdata of the **Survey on Equipment and Use of Information and Communication Technologies in Households (TIC-H) 2024** of the Spanish National Statistics Institute (INE). The outcome is binary (bought online or not), so the determinants are estimated with a **binary choice model (logit)**. The pipeline cleans the microdata, estimates weighted shares by population group, fits a weighted logit model for employees and reports average marginal effects and predictive performance.
 
 ## Main results
 
@@ -28,8 +28,13 @@ Download the 2024 file in R format and save `TICHCuestionario_2024.RData` (objec
 - **Outcome:** bought online in the last 3 months (`ULT_COM = 1`), the INE headline indicator. People who did not use the internet in the last year are counted as non-buyers.
 - **Population:** people aged 16 to 74. The model is estimated for employees, because contract type and ICT occupation are only asked to them.
 - **Covariates:** age, sex, education level (CNED-2014), contract type, ICT occupation, net monthly household income and number of children aged 10 to 15.
-- **Estimation:** logit with the person weight (`FACTOR_P`) using the `survey` package. The public file has no cluster or strata identifiers, so standard errors only account for the weights.
-- **Average marginal effects:** computed from the model predictions, with delta-method standard errors (see `R/utils.R`).
+- **Model:** binary choice model. The outcome $y_i$ takes the value 1 if person $i$ bought online in the last 3 months and 0 otherwise, and its probability is modelled with the logistic function:
+
+  $$P(y_i = 1 \mid x_i) = \Lambda(x_i'\beta) = \frac{\exp(x_i'\beta)}{1 + \exp(x_i'\beta)}$$
+
+  The coefficients $\beta$ are changes in the log-odds of buying online. They are reported as odds ratios in `output/tables/logit_coefficients.csv` and, to read them as changes in probability, as average marginal effects.
+- **Estimation:** maximum likelihood with the person weight (`FACTOR_P`), using `svyglm()` from the `survey` package. The public file has no cluster or strata identifiers, so standard errors only account for the weights.
+- **Average marginal effects:** the average change in the predicted probability, in percentage points, when a continuous variable increases by one unit or when a category replaces the reference category. Standard errors by the delta method (see `R/utils.R`).
 - **Fit:** weighted pseudo R², accuracy against the no-information rate, sensitivity, specificity and ROC curve.
 
 ## How to run
