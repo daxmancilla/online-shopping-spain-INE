@@ -1,4 +1,4 @@
-# Who buys online in Spain? A binary logit model with the INE ICT household survey, 2024
+# Who buys online in Spain? Evidence from the INE ICT household survey, 2024
 
 R code to measure online shopping in Spain and model its determinants with the microdata of the **Survey on Equipment and Use of Information and Communication Technologies in Households (TIC-H) 2024** of the Spanish National Statistics Institute (INE). The outcome is binary (bought online or not), so the determinants are estimated with a **binary choice model (logit)**. The pipeline cleans the microdata, estimates weighted shares by population group, fits a weighted logit model for employees and reports average marginal effects and predictive performance.
 
