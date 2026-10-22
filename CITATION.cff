@@ -11,6 +11,7 @@ abstract: >-
 authors:
   - family-names: "Mancilla Paucar"
     given-names: "Dax Kevin"
+    orcid: "https://orcid.org/0009-0005-2070-996X"
 repository-code: "https://github.com/daxmancilla/online-shopping-spain-INE"
 license: MIT
 version: "1.0.0"
