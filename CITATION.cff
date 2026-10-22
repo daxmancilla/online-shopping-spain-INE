@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+type: software
+title: "Who buys online in Spain? Evidence from the INE ICT household survey, 2024"
+abstract: >-
+  R code that measures online shopping in Spain with the microdata of the INE
+  Survey on Equipment and Use of ICT in Households (TIC-H) 2024: weighted
+  purchase rates by population group and a weighted binary logit model for
+  employees, with average marginal effects, delta-method standard errors and
+  predictive performance.
+authors:
+  - family-names: "Mancilla Paucar"
+    given-names: "Dax Kevin"
+repository-code: "https://github.com/daxmancilla/online-shopping-spain-INE"
+license: MIT
+version: "1.0.0"
+date-released: "2026-10-22"
+keywords:
+  - e-commerce
+  - binary choice model
+  - logit
+  - survey data
+  - INE
+  - R
+  - Spain
